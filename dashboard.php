@@ -8,6 +8,9 @@
     <title>Dashboard</title>
 </head>
 <body>
-    
+    <div class="container  fluid">
+        <div class="col-md-2"></div>
+        <div class="col-md-6"></div>
+    </div>
 </body>
 </html>
