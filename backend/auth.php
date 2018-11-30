@@ -1,6 +1,7 @@
 <?php
     //session_start();
     
+    // Mock login function
     function login($username, $password) {
         $cookie_name = "user";
         $cookie_value = "{$username}, {$password}";
@@ -10,11 +11,13 @@
         return TRUE;
     }
 
+    // Mock logout function
     function logout() {
         setcookie("user", NULL);
         return TRUE;
     }
     
+    // Checks if the User is logged in
     function checkLogin() {
         return isset($_COOKIE["user"]) ? TRUE : header('Location: /book');   
     }
