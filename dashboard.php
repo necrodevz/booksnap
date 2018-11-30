@@ -38,7 +38,7 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Books</a>
                             <div class="dropdown-menu">
                             <a class="dropdown-item" href="/book/books.php">View Books</a>
-                            <a class="dropdown-item" href="/book/backend/add-book.php">Add a Book</a>
+                            <a class="dropdown-item" href="/book/backend/not-found.php">Add a Book</a>
                             <!--
                             <a class="dropdown-item" href="#"></a>
                             <div class="dropdown-divider"></div>
@@ -56,13 +56,14 @@
         -->
                     </ul>
                 </div>
+                <!-- Suggestion: refactor this to use a PHP iterator -->
                 <div class="row">
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/add-member.php" role="button">New Member</a>
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/disable-member.php" role="button">Cancel Membership</a>
+                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/not-found.html" role="button">New Member</a>
+                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/not-found.html" role="button">Cancel Membership</a>
                 </div>    
                 <div class="row">
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/issue-book.php" role="button">Issue Book</a>
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/return-book.php" role="button">Accept Return</a>
+                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/not-found.html" role="button">Issue Book</a>
+                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/not-found.html" role="button">Accept Return</a>
                     <a class="btn btn-outline-primary dash-btn" href="#" role="button">File Complaint</a>
                 </div>    
             </div>
