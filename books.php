@@ -9,21 +9,13 @@ checkLogin();
 
 // Define variables
 $books = array();
-$book = [
-    isbn=>"",
-    name=>"",
-    description=>"",
-    year_published=>"",
-    genre=>"",
-    author=>"",
-    publisher=>"",
-];
+$book = array();
 
 
 // Define functions
 function getBooks(){
     $result = getTableData('books');
-    $row = mysqli_fetch_array($result);
+    $books = mysqli_fetch_array($result) ? mysqli_fetch_array($result) : [];
 }
 
 ?>
