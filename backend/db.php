@@ -8,8 +8,9 @@ $db = mysqli_connect('localhost','root','','bookmatic')
     return mysqli_query($db, $query) or die('Error querying database.');
  }
 
- function writeToTable($data){
-
+ function writeToTable($data, $table){
+    $query = "INSERT INTO {$table} (isbn, name, description, year_published, genre, author, publisher) VALUES ({$data});";
+    return mysqli_query($db, $query) or die('Error querying database.');
  }
 
 function getTableData($table){

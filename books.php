@@ -1,7 +1,7 @@
 <?php 
 // Include Auth and DB
-include 'auth.php';
-include 'db.php';
+require_once 'backend/auth.php';
+require_once 'backend/db.php';
 
 
 // Check if the User is logged in
@@ -9,7 +9,7 @@ checkLogin();
 
 // Define variables
 $books = array();
-$book = array();
+//$book = array();
 
 // Define functions
 function getBooks(){
@@ -45,10 +45,12 @@ function getBooks(){
 
     <div class="container  fluid">
         <div class="row" >
-            <div class="col-md-3 col-md-offset-1">
-                <a class="btn btn-primary" href="/book/backend/logout.php" role="button">Logout</a>
+            <div class="col-md-3 ">
+                <div class="row">
+                    <a class="btn btn-primary" href="/book/backend/logout.php" role="button">Logout</a>
+                </div>
             </div>
-            <div class="col-md-7 col-md-offset-1">
+            <div class="col-md-9">
                 <div class="row">
                     <ul class="nav nav-pills">
                         <li class="nav-item">
@@ -77,12 +79,32 @@ function getBooks(){
                     </ul>
                 </div>
                 <div class="row">
-                    
-                </div>    
-                <div class="row">
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/issue-book.php" role="button">Issue Book</a>
-                    <a class="btn btn-outline-primary dash-btn" href="/book/backend/return-book.php" role="button">Accept Return</a>
-                    <a class="btn btn-outline-primary dash-btn" href="#" role="button">File Complaint</a>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>isbn</th>
+                                <th>name</th>
+                                <th>description</th>
+                                <th>year_published</th>
+                                <th>genre</th>
+                                <th>author</th>
+                                <th>publisher</th>
+                                <th>actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($books as $book) {?>
+                            <tr>
+                                <?php foreach ($book as $field) {?>
+                                <td><?php echo $field; ?></td>
+                            </tr>
+                            <?php } ?>
+                            <tr>
+                                
+                            </tr>
+                                <?php } ?>
+                        </tbody>
+                    </table>
                 </div>    
             </div>
         </div>
