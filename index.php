@@ -15,7 +15,7 @@
 <body>
    
     <!-- // Login Component -->
-    <form class="form-signin text-center" method="post" action="backend/login.php" >
+    <form class="form-signin text-center" method="post" action="api/actions/login.php" >
       <img class="mb-4" src="https://nlj.gov.jm/wp-content/uploads/2018/04/nlj-logo-web-header.gif" alt="" width="166" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>

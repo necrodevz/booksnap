@@ -1,6 +1,6 @@
 <?php 
 // Include Auth and DB
-require_once 'backend/auth.php';
+require_once '../config/auth.php';
 checkLogin();
 ?>
 
@@ -22,22 +22,31 @@ checkLogin();
 <body>
    
     <!-- // Add Book Component -->
-    <form class="form-signin text-center" method="post" action="backend/login.php" >
+    <form class="form-add-book text-center" method="post" action="../index.php?action=add&obj=member" >
       <img class="mb-4" src="https://nlj.gov.jm/wp-content/uploads/2018/04/nlj-logo-web-header.gif" alt="nlaLogo" width="166" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Add Book</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Add Member</h1>
       <section>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="inputEmail">
-      </section
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="inputPassword">
+	  <div class="form-group">
+      <label for="memberEmail" class="sr-only">Email Address</label>
+      <input type="text" id="memberEmail" class="form-control" placeholder="Email Address" required autofocus name="memberEmail">
+	  </div>
+	  <div class="form-group">
+	  <label for="memberName" class="sr-only">Name</label>
+      <input type="text" id="memberName" class="form-control" placeholder="Full Name" required name="mamberName">
+	  </div>
+	  
+	  </section
+      <div class="form-group">
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <input type="checkbox" value="next_book"> Add Next Member
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2018 </p>
+	  </div>
+      <div class="form-group">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Add Member</button>
+      </div>
+	  <p class="mt-5 mb-3 text-muted">&copy; 2018 </p>
     </form>
 
 
